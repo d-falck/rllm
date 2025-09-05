@@ -142,7 +142,10 @@ class TavilySearchTool(Tool):
 
     def __del__(self):
         """Clean up resources when the tool is garbage collected."""
-        self._close_client()
+        try:
+            self._close_client()
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":
