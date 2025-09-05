@@ -207,7 +207,8 @@ class TaskRunner:
         try:
             trainer.fit_agent()
         finally:
-            trainer.shutdown()
+            # trainer.shutdown()
+            pass
 
 
 if __name__ == "__main__":
