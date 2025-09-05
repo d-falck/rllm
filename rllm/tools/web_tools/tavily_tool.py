@@ -66,9 +66,9 @@ class TavilyExtractTool(Tool):
 class TavilySearchTool(Tool):
     """A tool for searching the web using Tavily API."""
 
-    def __init__(self):
+    def __init__(self, name: str = "tavily-search"):
         self._init_client()
-        super().__init__(name="tavily-search", description="Search the web for information on a specific query")
+        super().__init__(name=name, description="Search the web for information on a specific query")
 
     @property
     def json(self):
